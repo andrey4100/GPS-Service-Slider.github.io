@@ -1,0 +1,395 @@
+@font-face {
+    font-family: 'TT Lakes Regular';
+    src: url('fonts/foTTLakes-Regular.eot');
+    src: url('fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+    url('fonts/TTLakes-Regular.woff') format('woff'),
+    url('fonts/TTLakes-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'TT Lakes Medium';
+    src: url('fonts/TTLakes-Medium.eot');
+    src: url('fonts/TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
+    url('fonts/TTLakes-Medium.woff') format('woff'),
+    url('fonts/TTLakes-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'TT Lakes Bold';
+    src: url('fonts/TTLakes-Bold.eot');
+    src: url('fonts/TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
+    url('fonts/TTLakes-Bold.woff') format('woff'),
+    url('fonts/TTLakes-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+/* Reset and base styles  */
+
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Links */
+
+a, a:link, a:visited  {
+    text-decoration: none;
+}
+
+a:hover  {
+    text-decoration: none;
+}
+
+/* Common */
+
+aside, nav, footer, header, section, main {
+	display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-size: inherit;
+	font-weight: inherit;
+}
+
+ul, ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+img, svg {
+	max-width: 100%;
+	height: auto;
+}
+
+address {
+    font-style: normal;
+}
+
+/* Form */
+
+input, textarea, button, select {
+	font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button, input[type="submit"] {
+    display: inline-block;
+    box-shadow: none;
+    background-color: transparent;
+    background: none;
+    cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+label {
+	cursor: pointer;
+}
+
+legend {
+	display: block;
+}
+
+body {
+  height: 100vh;
+  font-family: 'TT Lakes Regular', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 129%;
+  color: #1b1c21;
+  min-width: 320px;
+  letter-spacing: 0.01em;
+}
+
+h1 {
+  font-family: 'TT Lakes Bold', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 143%;
+  color: #1b1c21;
+}
+
+.container {
+  margin: 0 auto;
+	padding: 0 15px;
+	max-width: 1200px;
+	width: 100%;
+}
+
+.brand__title{
+  border-top: 1px solid #d9fff5;
+  background: #fff;
+  padding-top: 15px;
+}
+
+.brand__title-text{
+  font-family: 'TT Lakes Regular';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #7e7e82;
+  margin-bottom: 20px;
+}
+
+.brand__cards{
+  background: #f8f8f8;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  padding-top: 15px;
+}
+
+.brand  .brand__cards-list-mobile{
+  margin-right: calc(-50vw + 50%);
+}
+
+.brand__cards-list-mobile::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -5px;
+  width: 24px;
+  height: 81px;
+  padding-top: 25px;
+  background: linear-gradient(270deg, #f8f8f8 0.04%, rgba(248, 248, 248, 0) 100%);
+  z-index: 1;
+}
+
+.brand__cards .brand__cards-item-mobile{
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+  padding: 20px 15px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.brand__item-link{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.brand__item-ring{
+  border: 2px solid #ff3e79;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  align-self: center;
+  position: relative;
+}
+
+.brand__item-ring:after{
+  content: url(./img/checkmark.svg);
+  position: absolute;
+  top: 10px;
+  left: 14px;
+}
+
+.swiper-slide{
+  min-width: 238px;
+  max-width: 242px;
+  max-height: 74px;
+}
+
+.swiper .my-custom-pagination-div{
+  margin-top: 15px;
+  text-align: center;
+}
+
+.swiper .swiper-pagination-bullet{
+  width: 12px;
+  height: 12px;
+  background-color:  #888585;
+}
+
+.swiper .swiper-pagination-bullet-active{
+  background-color:  #b5b6bc;
+}
+
+.brand__cards-list{
+  display: none;
+}
+
+.brand__btn--close,
+.brand__btn--show{
+  display: none;
+}
+
+@media (min-width: 768px){
+
+  .brand .hidden{
+    display: none;
+  }
+
+  .brand .visible{
+    display: block;
+  }
+
+  .brand .brand__cards-list-mobile{
+    display: none;
+  }
+
+  .brand__cards-list{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 15px;
+  }
+
+  .container{
+    padding: 0 25px;
+  }
+
+  .brand .brand__cards-list{
+    margin-right: 0;
+  }
+
+  .brand__cards-list::after{
+    display: none;
+  }
+
+  .brand__cards-item{
+    min-width: 224px;
+    max-height: 72px;
+    background: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 6px;
+    padding: 20px 15px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    }
+
+  .brand__cards-item:not(:nth-child(3n)){
+    margin-right: 23px;
+  }
+
+  .brand__cards-item:nth-child(n + 7){
+    display: none;
+  }
+
+  .brand__cards-item.is-visible{
+    display: flex;
+  }
+
+  .brand__btn--show{
+    display: block;
+  }
+
+  .brand__btn{
+    font-family: 'TT Lakes Medium'; 
+    font-weight: 500;
+    font-size: 16px;
+    color: #1b1c21;
+    position: relative;
+    margin-left: 35px;
+    margin-top: 30px;
+  }
+
+  .brand__btn--show::before{
+    content: url(./img/arrows.svg);
+    position: absolute;
+    left: -25px;
+  }
+
+  .brand__btn--close::before{
+    content: url(./img/arrows.svg);
+    position: absolute;
+    left: -25px;
+    transform: rotate(180deg)
+  }
+}
+  @media (min-width: 1010px){
+    .brand__cards-item{
+      min-width: 240px;
+      max-height: 72px;
+    }
+    .container{
+      padding: 0 35px;
+    }
+    .brand__cards-item:not(:nth-child(3n)){
+      margin-right: 35px;
+    }
+  }
+
+
+  @media (min-width: 1120px){
+    .container{
+      padding: 0 35px;
+    }
+
+    .brand__cards-item:not(:nth-child(3n)){
+      margin-right: 0px;
+    }
+
+    .brand__cards-item:not(:nth-child(4n)){
+      margin-right: 30px;
+    }
+
+    .brand__cards-item{
+      min-width: 240px;
+      max-height: 72px;
+    }
+
+    .brand__btn{
+      margin-top: 0px;
+    }
+
+    .brand__btn--show{
+      margin-top: 30px;
+    }
+
+    .brand__btn--close{
+      margin-top: 50px;
+    }
+
+    .brand__cards-item:nth-child(n + 7){
+      display: flex;
+    }
+
+    .brand__cards-item:nth-child(n + 9){
+      display: none;
+    }
+
+    .brand__cards-item.is-visible{
+      display: flex;
+    }
+ }
